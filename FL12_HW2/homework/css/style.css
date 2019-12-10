@@ -1,7 +1,7 @@
 @media print{
     .tm-sidebar,
-    .text::after,
     section::before,
+    .text::after,
     .tm-team-img,
     .box,
     .carousel-indicators,
@@ -123,6 +123,7 @@ section{
 }
 
 .text::after{
+    position: absolute;
     content:"New";
     color: red;
     vertical-align: top;
@@ -130,6 +131,7 @@ section{
     font-weight: bold;
     
 }
+
 
 .padding-medium li:hover::before{
     content:">";
