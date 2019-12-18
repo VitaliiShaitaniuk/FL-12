@@ -1,0 +1,74 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #024161;
+  --link: #fff;
+  --link--hover: #1f52a4;
+  --bg-footer-color: #024161;
+}
+
+body {
+  font-family: roboto;
+
+}
+
+.post-1 {
+	background: #9d27b0;
+}
+.post-2 {
+	background: #9bb800;
+}
+.post-3 {
+	background: #ed5120;
+}
+.post-4 {
+	background: #9d27b0;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.container{
+  max-width: 1400px;
+  margin: 0px auto;
+}
+.navigation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #024161;
+  min-height: 100px;
+}
+.logo{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 100;
+}
+.logo span{
+  color: #ed5120;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.header{
+  margin-top: 20px;
+  background: center url(../img/post0.jpg) no-repeat;
+}
