@@ -1,41 +1,11 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #024161;
-  --link: #fff;
-  --link--hover: #1f52a4;
-  --bg-footer-color: #024161;
-}
-
 body {
   font-family: roboto;
   background: #0b192f;
 }
 
-.post-1 {
-	background: #9d27b0;
-}
-.post-2 {
-	background: #9bb800;
-}
-.post-3 {
-	background: #ed5120;
-}
-.post-4 {
-	background: #9d27b0;
-}
-.post-5 {
-	background: #2d95bb;
-}
-
-
 *{
   padding: 0px;
-  margin: 0px;
-  
+  margin: 0px; 
 }
 .container{
   max-width: 1400px;
@@ -48,59 +18,48 @@ body {
   min-height: 100px;
   align-items: center;
 }
-
-
-
 .logo{
   color: #fff;
   font-size: 50px;
-  font-weight: 100;
-  
+  font-weight: 100; 
 }
 .logo span{
   color: #ed5120;
 }
 .nav-links{
+  margin-left: 38vh;
   display: flex;
   justify-content: space-around;
   width: 25%;
-  
   align-items:center;
-  
-  
-  
-
 }
 .nav-links li{
-  
   list-style: none;
-  
-  
-  
 }
-
 .nav-links a{
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  
   background-size: 100%;
   margin: 10px;
-  
-  
-    
-  
 }
 .nav-links li:hover{
   background-color:#1f52a4;
 }
-
+.burger{
+  visibility: hidden;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
 .header{
   margin-top: 20px;
   background: center url(../img/post0.jpg) no-repeat;
   background-size: cover;
-  height: 474px;
-  
+  height: 474px;  
 }
 .header_wrap{
   width: 53%;
@@ -108,7 +67,6 @@ body {
   margin-left: 40px;
   color: #fff;
   position: absolute;
-
 }
 .header_wrap h1{
   margin-top: 250px;
@@ -122,8 +80,7 @@ body {
 .posts_news{
   margin-top: 20px;
   display: flex;
-  align-items: flex-start;
-  
+  align-items: flex-start;  
 }
 .post_column{
   width: 75%;
@@ -134,28 +91,33 @@ body {
   background-color: #9d27b0;
 }
 .post_image{
-  
+  order: 1;
   width: 49%;
-  background: center url(../img/post1.jpg) no-repeat;
+}
+.post_image img{
   background-size: cover;
   height: 350px;
 }
+.post_image img:hover {
+  opacity:0.5;
+  }
 .post_content{
-  
+  order: 2;
   width: 51%;
   margin: 40px;
+  color: #fff;
 }
+.post_content:hover {
+  opacity:0.5;
+  }
 .post_content h1{
   font-weight: 100;
   font-size: 60px;
-  color: #fff;
 }
 .post_content p{
   margin-top: 30px;
-  color: #fff;
   line-height: 32px;
 }
-
 .post2{
   height: 350px;
   display: flex;
@@ -164,15 +126,24 @@ body {
 .post_image2{
   order: 2;
   width: 49%;
-  background: center url(../img/post2.jpg) no-repeat;
+}
+.post_image2 img{
+  width: 100%;
   background-size: cover;
   height: 350px;
 }
+.post_image2 img:hover {
+  opacity:0.5;
+  }
+
 .post_content2{
   order: 1;
   width: 51%;
   margin: 40px;
 }
+.post_content2:hover {
+  opacity:0.5;
+  }
 .post_content2 h1{
   font-weight: 100;
   font-size: 60px;
@@ -189,17 +160,23 @@ body {
   background-color: #ed5120;
 }
 .post_image3{
-  
   width: 49%;
-  background: center url(../img/post3.jpg) no-repeat;
+}
+.post_image3 img{
+  width: 100%;
   background-size: cover;
   height: 350px;
 }
+.post_image3 img:hover {
+  opacity:0.5;
+  }
 .post_content3{
-  
   width: 51%;
   margin: 40px;
 }
+.post_content3:hover {
+  opacity:0.5;
+  }
 .post_content3 h1{
   font-weight: 100;
   font-size: 60px;
@@ -218,15 +195,23 @@ body {
 .post_image4{
   order: 2;
   width: 49%;
-  background: center url(../img/post4.jpg) no-repeat;
+}
+.post_image4 img{
+  width: 100%;
   background-size: cover;
   height: 350px;
 }
+.post_image4 img:hover {
+  opacity:0.5;
+  }
 .post_content4{
   order: 1;
   width: 51%;
   margin: 40px;
 }
+.post_content4:hover {
+  opacity:0.5;
+  }
 .post_content4 h1{
   font-weight: 100;
   font-size: 60px;
@@ -237,11 +222,9 @@ body {
   color: #fff;
   line-height: 32px;
 }
-
 .news_column{
   width: 25%;
-  margin-left: 20px;
-  
+  margin-left: 20px;  
 }
 .news1{
   display: flex;
@@ -251,7 +234,9 @@ body {
 }
 .news_image{
   height: 45%;
-  background: center url(../img/news1.jpg) no-repeat;
+}
+.news_image img{
+  width: 100%;
   background-size: cover;
 }
 .news_content{
@@ -273,8 +258,10 @@ body {
   background-color: #fff;
 }
 .news_image2{
-  height: 45%;
-  background: center url(../img/news2.jpg) no-repeat;
+  height: 45%;  
+}
+.news_image2 img{
+  width: 100%;
   background-size: cover;
 }
 .news_content2{
@@ -296,6 +283,9 @@ body {
 .post_content5{
   margin: 40px;
 }
+.post_content5:hover {
+  opacity:0.5;
+  }
 .post_content5 h1{
   font-weight: 100;
   font-size: 60px;
@@ -315,4 +305,131 @@ footer{
   justify-content: space-around;
   color: #fff;
   align-items: center;
+}
+@media screen and (max-width: 768px){
+  .nav-links{
+    display: none;
+  }
+  .burger{
+    visibility: visible;
+  }
+  .navigation{
+    flex-direction: column-reverse;
+  }
+  .header_wrap{
+    width: 90%;
+  }
+  .post1{
+    flex-direction: column;
+    height: 700px;
+  }
+  .post_image img{
+    width: 550px;
+  }
+  .post_content h1{
+    font-size: 40px;
+  }
+  .post_content {
+    width: 80%;
+  }
+  .post2{
+    flex-direction: column;
+    height: 700px;
+  }
+  .post_image2 img{
+    order: 1;
+    width: 550px;
+  }
+  .post_content2 h1{
+    font-size: 40px;
+  }
+  .post_content2 {
+    order: 2;
+    width: 80%;
+  }
+  .post3{
+    flex-direction: column;
+    height: 700px;
+  }
+  .post_image3 img{
+    width: 550px;
+  }
+  .post_content3 h1{
+    font-size: 40px;
+  }
+  .post_content3 {
+    width: 80%;
+  }
+  .post4{
+    flex-direction: column;
+    height: 700px;
+  }
+  .post_image4 img{
+    order: 1;
+    width: 550px;
+  }
+  .post_content4 h1{
+    font-size: 40px;
+  }
+  .post_content4 {
+    order: 2;
+    width: 80%;
+  }
+  .post_content5 h1{
+    font-size: 30px;
+  }
+  .news_content{
+    margin: 10px;
+  }
+  .news_content h1{
+    font-size: 25px;
+  }
+  .news_content p{
+    line-height: 20px;
+  }
+  .news_content2{
+    margin: 10px;
+  }
+  .news_content2 h1{
+    font-size: 25px;
+  }
+  .news_content2 p{
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 480px){
+  .header_wrap h1{
+    margin-top: 150px;
+  }
+  .posts_news{
+    flex-direction: column;
+  }
+  .post_column{
+    width: 100%;
+  }
+  .post5{
+    height: 300px;
+  }
+  .news_column{
+    width: 100%;
+    margin: 0px;
+  }
+  .news1{
+    flex-direction: column;
+  }
+  .news_content{
+    height: 49%;
+  }
+  .news_image{
+    height: 308px;
+  }
+  .news2{
+    flex-direction: column;
+  }
+  .news_content2{
+    height: 49%;
+  }
+  .news_image2{
+    height: 308px;
+  }
 }
