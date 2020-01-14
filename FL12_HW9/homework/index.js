@@ -47,3 +47,8 @@ function makeListFromRange(arr){
     }
     return listArray;
 }
+function getArrayOfKeys(arr,key){
+    let output = [];
+    executeforEach(arr, obj => output.push(obj[key]));
+    return output;
+}
