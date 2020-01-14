@@ -11,3 +11,8 @@ function convert(args){
     }
     return output;
 }
+function executeforEach(array,func){
+    for(let symbol of array){
+        func(symbol);
+    }
+}
