@@ -23,5 +23,14 @@ function mapArray(array,func){
     }
     executeforEach(outputArr,func);
     return outputArr;
-
 }
+function filterArray(array, func){
+    let outputFiltArr = [];
+    executeforEach(array, function(symbol){
+        if(func(symbol) === true){
+            outputFiltArr.push(symbol);
+        }
+    })
+    return outputFiltArr;
+}
+
