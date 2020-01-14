@@ -40,3 +40,10 @@ function flipOver(str){
     }
     return strOutput;
 }
+function makeListFromRange(arr){
+    let listArray = [];
+    for(let i = arr[0]; i <= arr[1]; i++){
+        listArray.push(i);
+    }
+    return listArray;
+}
