@@ -33,4 +33,10 @@ function filterArray(array, func){
     })
     return outputFiltArr;
 }
-
+function flipOver(str){
+    let strOutput = '';
+    for(let symbol of str){
+        strOutput = symbol + strOutput;
+    }
+    return strOutput;
+}
