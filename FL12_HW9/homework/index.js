@@ -16,3 +16,12 @@ function executeforEach(array,func){
         func(symbol);
     }
 }
+function mapArray(array,func){
+    let outputArr = [];
+    for(let symbol of array){
+        outputArr.push(parseInt(symbol));
+    }
+    executeforEach(outputArr,func);
+    return outputArr;
+
+}
