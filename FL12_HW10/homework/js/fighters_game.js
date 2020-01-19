@@ -7,8 +7,23 @@ class Fighter {
         this._agility = agility;
         
     }
+    getName() {
+        return this._name;
+    }
+    getDamage() {
+        return this._damage;
+    }
+    getStrength() {
+        return this._strength;
+    }
+    getAgility() {
+        return this._agility;
+    }
+    getHealth() {
+        return this._hp;
+    }
     
 }
 const myFighter = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25}); 
-let name = myFighter.name;
-console.log(name); 
+let damage = myFighter.getDamage();
+console.log(damage); 
