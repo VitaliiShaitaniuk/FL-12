@@ -67,6 +67,12 @@ function battle(fighter1, fighter2) {
         if (fighter2.getHealth() > 0) {
             fighter2.attack(fighter1)
         }
+        if (fighter1.getHealth() <= 0) {
+            console.log(`${fighter2.getName()} has won!`);
+        }
+        if (fighter2.getHealth() <= 0) {
+            console.log(`${fighter1.getName()} has won!`);
+        }
     }
 
     fighter1.getHealth() > 0 ? fighter1.addWin() : fighter1.addLoss();
@@ -76,6 +82,6 @@ function battle(fighter1, fighter2) {
     fighter2.logCombatHistory();
 }
 
-const maximus = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25});
+const maximus = new Fighter({name: 'Maximus', damage: 20, hp: 100, strength: 20, agility: 15});
 const commodus = new Fighter({name: 'Commodus', damage: 25, hp: 90, strength: 25, agility: 20}); 
 battle(maximus, commodus);
