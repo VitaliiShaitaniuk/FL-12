@@ -54,7 +54,28 @@ class Fighter {
 
 }
 
+function battle(fighter1, fighter2) {
+    if (fighter1.getHealth() === 0 || fighter2.getHealth() === 0) {
+        console.log(`${fighter2.getHealth() === 0 ? 
+            fighter2.getName() : fighter1.getName()} is dead and can't fight!`);
+        return;
+    }
+    while (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
+        if (fighter1.getHealth() > 0) {
+            fighter1.attack(fighter2)
+        }
+        if (fighter2.getHealth() > 0) {
+            fighter2.attack(fighter1)
+        }
+    }
 
+    fighter1.getHealth() > 0 ? fighter1.addWin() : fighter1.addLoss();
+    fighter2.getHealth() > 0 ? fighter2.addWin() : fighter2.addLoss();
 
-const fighter1 = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25});
-const fighter2 = new Fighter({name: 'Commodus', damage: 25, hp: 90, strength: 25, agility: 20}); 
+    fighter1.logCombatHistory();
+    fighter2.logCombatHistory();
+}
+
+const maximus = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25});
+const commodus = new Fighter({name: 'Commodus', damage: 25, hp: 90, strength: 25, agility: 20}); 
+battle(maximus, commodus);
