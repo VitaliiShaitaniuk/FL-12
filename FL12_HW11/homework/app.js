@@ -37,4 +37,10 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
-// Todo: your code goes here
+const unordered_list = document.createElement('ul');
+unordered_list.innerHTML = 'Films';
+document.body.appendChild(unordered_list);
+
+const list = document.createElement('li');
+list.innerHTML = 'Iron Man.avi';
+unordered_list.appendChild(list);
