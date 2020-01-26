@@ -37,59 +37,44 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
-const unordered_list = document.createElement('ul');
 
-document.body.appendChild(unordered_list);
+function treeView(structure, element){
+  if (structure) {
+  let unordered_list = document.createElement('ul');
 
-const folder_Films = document.createElement('li');
+  for (let item of structure){
+    let folder_Films = document.createElement('li');
+    folder_Films.classList.add('folder');
 
-folder_Films.className = 'closedFolder';
-folder_Films.innerHTML = 'Films';
-unordered_list.appendChild(folder_Films);
+    let folderIcon = document.createElement('div');
+    folderIcon.classList.add('title');
+    folder_Films.appendChild(folderIcon);
+    let image = document.createElement('i');
+    image.classList.add('material-icons', 'folder');
+    image.appendChild(document.createTextNode('folder'));
+    folderIcon.appendChild(image);
+    folderIcon.appendChild(document.createTextNode(item.title));
+    if (item.folder){
+      folderIcon.classList.toggle('folder');
+      image.innerText = 'folder';
+      folderIcon.addEventListener('click',
+      function(){
+          image.innerText === 'folder' ? image.innerText = 'folder_open' : image.innerText = 'folder';
+          folder_Films.querySelector('.closed').classList.toggle('open');
+        });
+      
+      
+    }
+    unordered_list.appendChild(folder_Films);
+  }
+  element.appendChild(unordered_list);
+} else {
+  let paragraph = document.createElement('p');
+  paragraph.classList.add('emptyFolder');
+  let text = document.createTextNode('Folder is empty');
+  paragraph.appendChild(text);
+  element.appendChild(paragraph);
+}
+} 
 
-
-const folder_Documents = document.createElement('li');
-folder_Documents.classList.add('closedFolder');
-folder_Documents.innerHTML = 'Documents';
-unordered_list.appendChild(folder_Documents);
-
-const ulFilms = document.createElement('ul');
-folder_Films.appendChild(ulFilms);
-const film1 = document.createElement('li');
-film1.innerHTML = 'Iron Man.avi';
-ulFilms.appendChild(film1);
-
-const folder_Fantasy = document.createElement('li');
-folder_Fantasy.classList.add('closedFolder');
-folder_Fantasy.innerHTML = 'Fantasy';
-ulFilms.appendChild(folder_Fantasy);
-
-const ulFantasy = document.createElement('ul');
-folder_Fantasy.appendChild(ulFantasy);
-const film2 = document.createElement('li');
-film2.innerHTML = 'The Lord of the rings.avi';
-ulFantasy.appendChild(film2);
-
-const newFolder1 = document.createElement('li');
-newFolder1.classList.add('closedFolder');
-newFolder1.innerHTML = 'New folder 1';
-ulFantasy.appendChild(newFolder1);
-
-const ulNothing = document.createElement('ul');
-newFolder1.appendChild(ulNothing);
-const nothing = document.createElement('li');
-nothing.innerHTML = 'Folder is empty';
-ulNothing.appendChild(nothing);
-
-const ulDocuments = document.createElement('ul');
-folder_Documents.appendChild(ulDocuments);
-const epamFolder = document.createElement('li');
-epamFolder.classList.add('closedFolder');
-epamFolder.innerHTML = 'EPAM Homework answers';
-ulDocuments.appendChild(epamFolder);
-
-const epamFolderList = document.createElement('ul');
-epamFolder.appendChild(epamFolderList);
-const epamNothingFolder = document.createElement('li');
-epamNothingFolder.innerHTML = 'Folder is empty';
-epamFolderList.appendChild(epamNothingFolder);
+treeView(structure, rootNode);
